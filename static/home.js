@@ -157,7 +157,7 @@ function setActiveNavLink() {
             // and a page-level link (like index.html) was previously set active, keep it.
             // This handles index.html when scrolled, but no specific #section matches an #anchor in nav
             if(!sectionSpecificLinkActivated && activeLinkSetByPage && (mainScrollSpyPageNames.includes(currentPath) || currentPath === '')) {
-                const pageLink = document.querySelector(`nav ul li a[href$="${currentPath}"]`) || document.querySelector('nav ul li a[href="index.html"]');
+                const pageLink = document.querySelector(`nav ul li a[href$="${currentPath}"]`) || document.querySelector('nav ul li a[href="home.html"]');
                  if (pageLink) pageLink.classList.add('active');
             }
 
