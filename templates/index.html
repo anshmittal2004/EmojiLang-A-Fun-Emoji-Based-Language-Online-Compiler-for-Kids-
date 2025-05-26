@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emojilang Code Executor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">Emojilang 🚀</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html" class="active">Code</a></li>
+            <li><a href="tutorial.html">Tutorial</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Emoji Button Strip -->
+    <div class="emoji-strip">
+        <button class="emoji-btn" data-emoji="🆕">🆕</button>
+        <button class="emoji-btn" data-emoji="💬">💬</button>
+        <button class="emoji-btn" data-emoji="⌨️">⌨️</button>
+        <button class="emoji-btn" data-emoji="❓">❓</button>
+        <button class="emoji-btn" data-emoji="❗">❗</button>
+        <button class="emoji-btn" data-emoji="🔄">🔄</button>
+        <button class="emoji-btn" data-emoji="▶️">▶️</button>
+        <button class="emoji-btn" data-emoji="⏹️">⏹️</button>
+        <button class="emoji-btn" data-emoji="=">=</button>
+        <button class="emoji-btn" data-emoji="+">+</button>
+        <button class="emoji-btn" data-emoji="-">-</button>
+        <button class="emoji-btn" data-emoji="*">*</button>
+        <button class="emoji-btn" data-emoji="/">/</button>
+        <button class="emoji-btn" data-emoji=">">></button>
+        <button class="emoji-btn" data-emoji="<"><</button>
+        <button class="emoji-btn" data-emoji="==">==</button>
+    </div>
+
+    <!-- Main Content: Split Layout -->
+    <div class="main-container">
+        <!-- Code Editor (60%) -->
+        <div class="editor-container">
+            <textarea id="codeInput" placeholder="Write your Emojilang code here..."></textarea>
+            <button id="runBtn">Compile & Run</button>
+        </div>
+
+        <!-- Terminal (40%) -->
+        <div class="terminal-container">
+            <pre id="output"></pre>
+            <div id="inputArea" style="display: none;">
+                <textarea type="text" id="userInput" placeholder="Enter input here..."></textarea>
+                <button id="submitInputBtn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

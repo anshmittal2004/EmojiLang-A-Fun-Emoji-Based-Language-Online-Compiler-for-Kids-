@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #001f27;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #002b36;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00bfff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    font-weight: bold;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #00bfff;
+}
+
+/* Emoji Button Strip */
+.emoji-strip {
+    background-color: #001f27;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.emoji-btn {
+    font-size: 30px; /* Large emojis for kids */
+    padding: 10px 15px;
+    background-color: #268bd2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.emoji-btn:hover {
+    background-color: #00bfff;
+    transform: scale(1.1);
+}
+
+.emoji-btn.clicked {
+    background-color: #00bfff;
+    transform: scale(1.05); /* Slightly smaller scale for click feedback */
+}
+
+/* Main Container (Split Layout) */
+.main-container {
+    flex: 1;
+    display: flex;
+    height: calc(100vh - 60px - 60px);
+}
+
+/* Code Editor (60%) */
+.editor-container {
+    width: 60%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#codeInput {
+    flex: 1;
+    background-color: #002b36;
+    color: #2aa17f;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    border: none;
+    padding: 15px;
+    resize: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#runBtn {
+    background-color: #268bd2;
+    color: #121212;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+#runBtn:hover {
+    background-color: #009acd;
+}
+
+/* Terminal (40%) */
+.terminal-container {
+    width: 40%;
+    background-color: #001f27;
+    padding-bottom: 71px;
+    padding-left: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+#output {
+    flex: 1;
+    background-color: #002b36;
+    color: #2aa17f;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 1px;
+}
+
+#inputArea {
+    display: none;
+    text-align: left;
+    height: 40%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+#userInput {
+    padding: 15px;
+    border: none;
+    background-color: #001f27;
+    color: cyan;
+    resize: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    width: 100%;
+    height: 102.5%;
+    margin-bottom: 5px;
+}
+
+#submitInputBtn {
+    background-color: #268bd2;
+    color: #011627;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+#submitInputBtn:hover {
+    background-color: #009acd;
+}

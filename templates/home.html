@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emojilang - Code with a Smile! 😊</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Emojilang <span class="logo-rocket">🚀</span></div>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="index.html">Code</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Introduction Section -->
+        <section id="introduction" class="hero">
+            <div class="hero-background-emojis">
+                <!-- Emojis will be added via JS for dynamic effect -->
+            </div>
+            <div class="hero-content">
+                <h1 class="animate-text-reveal">
+                    <span>Emojilang:</span> <span>The</span>
+                    <span class="highlight-fun">Fun</span> <span>and</span>
+                    <span class="highlight-easy">Easy</span>
+                    <span>Way</span> <span>for</span> <span>Kids</span> <span>to</span> <span>Learn</span>
+                    <span class="highlight-coding" id="typewriter-target-verb">Coding</span>
+                </h1>
+                <p class="subtitle animate-fade-in animate-delay-1s">
+                    Emojilang is an exciting online compiler that teaches kids coding through the power of emojis.
+                    Designed to be <span id="typewriter-adjectives" class="highlight-interactive"></span>, it’s the perfect way for young learners to dive into the world of programming!
+                </p>
+                <a href="index.html" class="cta-button animate-fade-in animate-delay-1-5s">Start Your Emoji Adventure <span class="button-emoji">✨</span></a>
+            </div>
+            <div class="hero-visual-container animate-fade-in animate-delay-2s">
+                <div class="mock-editor">
+                    <div class="mock-editor-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        Emojilang Playground
+                    </div>
+                    <div class="mock-editor-code">
+                        <span class="emoji-code">🆕</span> <span class="text-code">name = "World"</span><br>
+                        <span class="emoji-code">💬</span> <span class="text-code">"Hello, " + name + "!"</span><br>
+                        <span class="emoji-code">🎉</span> <span class="text-code">// Your amazing output here!</span>
+                    </div>
+                </div>
+            </div>
+             <a href="#why-emojilang" class="scroll-down-link" aria-label="Scroll to next section">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- 2. Why Choose Emojilang? Section -->
+        <section id="why-emojilang" class="content-section">
+            <h2 class="section-title animate-on-scroll">🤔 Why Emojilang Stands Out</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon-bg"><i class="fas fa-puzzle-piece feature-icon"></i></div>
+                    <h3>Engaging & Interactive</h3>
+                    <p>Keeps kids motivated with a hands-on, visual learning experience where they see instant emoji-powered results.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" style="--animation-delay: 0.2s;">
+                    <div class="feature-icon-bg"><i class="fas fa-child feature-icon"></i></div>
+                    <h3>Kid-Friendly Design</h3>
+                    <p>Built specifically for children with an intuitive interface, making coding approachable and delightfully stress-free.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" style="--animation-delay: 0.4s;">
+                    <div class="feature-icon-bg"><i class="fas fa-cogs feature-icon"></i></div>
+                    <h3>Core Coding Skills</h3>
+                    <p>Teaches fundamental programming concepts like loops, variables, and logic in a simple, digestible, and fun way.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" style="--animation-delay: 0.6s;">
+                    <div class="feature-icon-bg"><i class="fas fa-grin-stars feature-icon"></i></div>
+                    <h3>Emoji-Powered Fun</h3>
+                    <p>Uses the universal language of emojis to turn coding into an enjoyable adventure, sparking creativity and curiosity.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" style="--animation-delay: 0.8s;">
+                     <div class="feature-icon-bg"><i class="fas fa-rocket feature-icon"></i></div>
+                    <h3>Instant Access Online</h3>
+                    <p>Features a web-based compiler for kids to practice coding anytime, anywhere – no complex setup needed!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. How It Works Section -->
+        <section id="how-it-works" class="content-section alternate-bg">
+            <h2 class="section-title animate-on-scroll">⚙️ How Emojilang Makes Coding Simple</h2>
+            <p class="section-intro animate-on-scroll" style="--animation-delay: 0.2s;">
+                With Emojilang, kids write code using colorful emojis, then watch it come to life in our online compiler.
+                It’s as simple as drag & drop or type, click ‘Run,’ and see the magic happen!
+            </p>
+            <div class="how-it-works-flow">
+                <div class="flow-step animate-on-scroll" style="--animation-delay: 0.4s;">
+                    <div class="flow-icon"><span class="emoji-icon">📝</span></div>
+                    <h4>1. Write with Emojis</h4>
+                    <p>Select emojis that represent code commands. It's visual and intuitive!</p>
+                    <div class="flow-code-example">➡️ <span class="code-block"> déclarer <span class="emoji-var">🚀</span> = <span class="emoji-val">5</span> </span></div>
+                </div>
+                <div class="flow-arrow animate-on-scroll" style="--animation-delay: 0.6s;">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+                <div class="flow-step animate-on-scroll" style="--animation-delay: 0.8s;">
+                    <div class="flow-icon"><span class="emoji-icon">▶️</span></div>
+                    <h4>2. Run Your Code</h4>
+                    <p>Hit the "Run" button and our compiler instantly processes your emoji script.</p>
+                    <div class="flow-code-example">➡️ <span class="code-block"> compiler(<span class="emoji-var">🚀</span>) </span></div>
+                </div>
+                <div class="flow-arrow animate-on-scroll" style="--animation-delay: 1s;">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+                <div class="flow-step animate-on-scroll" style="--animation-delay: 1.2s;">
+                    <div class="flow-icon"><span class="emoji-icon">✨</span></div>
+                    <h4>3. See the Magic!</h4>
+                    <p>Watch your program execute and display the results. Instant gratification!</p>
+                    <div class="flow-code-example">➡️ <span class="code-block"> afficher: <span class="output-val">🌟🌟🌟🌟🌟</span></span></div>
+                </div>
+            </div>
+             <!-- <div class="how-it-works-visual animate-on-scroll" style="--animation-delay: 1.4s;">
+                <p>🎬 Short animated GIF/video showcasing the Emojilang editor: drag-drop emoji, click run, see output. 🎬</p>
+            </div> -->
+        </section>
+
+        <!-- 4. What Users Are Saying Section -->
+        <section id="testimonials" class="content-section">
+            <h2 class="section-title animate-on-scroll">💬 Hear From Our Young Coders & Parents</h2>
+            <div class="testimonials-carousel animate-on-scroll" style="--animation-delay: 0.2s;">
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/80?img=1" alt="Sarah M." class="testimonial-avatar">
+                    <p>"My daughter absolutely LOVES Emojilang! It’s like a super fun game that’s secretly teaching her valuable coding skills. The colorful emojis make it so engaging!"</p>
+                    <div class="testimonial-author">- Sarah M., Parent</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/80?img=7" alt="Liam K." class="testimonial-avatar">
+                    <p>"I made my first program with 🚀 and ✨ in just 10 minutes! It was way cooler than other coding stuff. Emojis make it easy to understand."</p>
+                    <div class="testimonial-author">- Liam K., Age 9</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/80?img=32" alt="David P." class="testimonial-avatar">
+                    <p>"As an educator, I'm thoroughly impressed by how Emojilang simplifies complex programming ideas. It's a fantastic and innovative entry point to computational thinking."</p>
+                    <div class="testimonial-author">- David P., Teacher</div>
+                </div>
+                 <!-- Add more cards for carousel functionality if desired -->
+            </div>
+        </section>
+
+        <!-- 5. Get Started Section -->
+        <section id="get-started" class="content-section cta-section alternate-bg">
+            <h2 class="section-title animate-on-scroll">🚀 Ready to Code with a Smile?</h2>
+            <p class="animate-on-scroll" style="--animation-delay: 0.2s;">
+                Unlock your child's creative potential and let them embark on an exciting coding journey with Emojilang.
+                It's fun, it's easy, and it's free to try!
+            </p>
+            <div class="cta-buttons animate-on-scroll" style="--animation-delay: 0.4s;">
+                <a href="index.html" class="cta-button large primary">Start Coding Now <i class="fas fa-space-shuttle"></i></a>
+                <a href="tutorial.html" class="cta-button large secondary">Explore Tutorials <i class="fas fa-book-open"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="current-year"></span> Emojilang. All rights reserved. Let's code the future, one emoji at a time! 😉</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+</body>
+</html>
