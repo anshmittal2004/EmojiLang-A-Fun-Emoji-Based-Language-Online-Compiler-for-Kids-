@@ -428,7 +428,7 @@ class Interpreter:
                 for stmt in node.block:
                     yield from self.interpret(stmt)
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 sessions = {}  # Dictionary to store generator states
 
 @app.route('/')
