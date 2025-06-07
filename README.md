@@ -30,7 +30,7 @@ EmojiLang is a revolutionary programming language designed specifically for chil
 ## 🚀 Quick Start
 
 ### Option 1: Try Online (Recommended)
-1. Visit our [Live Demo](https://your-demo-link.com) 🌐
+1. Visit our [Live Demo]([https://your-demo-link.com](https://emoji-lang-a-fun-emoji-based-langua.vercel.app/)) 🌐
 2. Start coding with emojis right away!
 3. No setup required - just open and code! ⚡
 
